@@ -46,7 +46,7 @@ html, body, #app {
 }
 
 body {
-  background-image: url('./assets/images/StarrySky.jpg');
+  background: url('./assets/images/StarrySky.jpg') no-repeat center center fixed;
   background-size: cover;
 }
 
