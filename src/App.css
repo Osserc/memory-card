@@ -20,10 +20,6 @@
   align-items: center;
 }
 
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
 .b-box {
   box-sizing: border-box;
 }
@@ -57,4 +53,25 @@ header {
 
 .Scoreboard {
   font-size: 32px;
+}
+
+#display {
+  overflow: auto;
+  width: 95%;
+  box-shadow: 0px 0px 5px 5px black;
+  margin: 5% 0;
+}
+
+#display img {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  #top {
+    flex-direction: column;
+  }
+
+  header {
+    text-align: center;
+  }
 }

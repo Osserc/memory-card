@@ -87,11 +87,13 @@ function App() {
 
   return (
     <div className="App">
-      <div className="flex justify-between p-15">
+      <div id="top" className="flex justify-between p-15">
         <Header />
         <Scoreboard currentScore={currentScore} total={allCards.length} highScore={highScore} />
       </div>
-      <Display cards={currentCards} touchCard={touchCard} />
+      <div className="flex justify-center align-center">
+        <Display cards={currentCards} touchCard={touchCard} />
+      </div>
     </div>
   );
 }
