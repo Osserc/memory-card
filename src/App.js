@@ -1,4 +1,5 @@
-import './App.css';
+import './App.css'
+import { Header } from './components/Header'
 import { Tarots } from './components/Tarots'
 import { useState, useEffect } from 'react'
 
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       {console.log(touchedCards)}
       {console.log(allCards)}
       {Tarots.cards.map((card, index) => {
