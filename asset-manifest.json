@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.bba19824.css",
+    "main.js": "/memory-card/static/js/main.26fb65d3.js",
+    "static/media/StarrySky.jpg": "/memory-card/static/media/StarrySky.57ce6c7492f617d6c699.jpg",
+    "static/media/19.jpg": "/memory-card/static/media/19.8d973c0abb9425bd3aaa.jpg",
+    "static/media/20.jpg": "/memory-card/static/media/20.0b0a029bef4858cac793.jpg",
+    "static/media/7.jpg": "/memory-card/static/media/7.7f178b6250ee5385cb45.jpg",
+    "static/media/6.jpg": "/memory-card/static/media/6.32b00498bad85f46bac6.jpg",
+    "static/media/13.jpg": "/memory-card/static/media/13.ef0c8ed49f12b2d8c69c.jpg",
+    "static/media/3.jpg": "/memory-card/static/media/3.46e08aa499493ab798de.jpg",
+    "static/media/18.jpg": "/memory-card/static/media/18.16c9f63cb56a6f1c24c3.jpg",
+    "static/media/14.jpg": "/memory-card/static/media/14.2b3c1ed5ea9da78d6cb4.jpg",
+    "static/media/21.jpg": "/memory-card/static/media/21.74795c04064eac43293d.jpg",
+    "static/media/5.jpg": "/memory-card/static/media/5.67ce69b54dab13784443.jpg",
+    "static/media/10.jpg": "/memory-card/static/media/10.a4551e84c24db3833ba0.jpg",
+    "static/media/17.jpg": "/memory-card/static/media/17.899a4d1e53bc83c1b39d.jpg",
+    "static/media/4.jpg": "/memory-card/static/media/4.4eae8c6a6bc91a55688b.jpg",
+    "static/media/2.jpg": "/memory-card/static/media/2.c007efd133646bef4dbc.jpg",
+    "static/media/0.jpg": "/memory-card/static/media/0.934c4c6bcdc1ce9ee446.jpg",
+    "static/media/16.jpg": "/memory-card/static/media/16.e0942a5511be9143a6be.jpg",
+    "static/media/1.jpg": "/memory-card/static/media/1.fb1f7aa882c877e76ed3.jpg",
+    "static/media/11.jpg": "/memory-card/static/media/11.8452f5b8bda7ab9ccb5c.jpg",
+    "static/media/15.jpg": "/memory-card/static/media/15.158ce7926b280f90c01e.jpg",
+    "static/media/8.jpg": "/memory-card/static/media/8.64c49199158a3daef1b1.jpg",
+    "static/media/9.jpg": "/memory-card/static/media/9.df88435df556518214e9.jpg",
+    "static/media/12.jpg": "/memory-card/static/media/12.69b784cc9f89b2e26bb5.jpg",
+    "index.html": "/memory-card/index.html",
+    "main.bba19824.css.map": "/memory-card/static/css/main.bba19824.css.map",
+    "main.26fb65d3.js.map": "/memory-card/static/js/main.26fb65d3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bba19824.css",
+    "static/js/main.26fb65d3.js"
+  ]
+}
