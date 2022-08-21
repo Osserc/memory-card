@@ -1,8 +1,9 @@
 import './App.css'
 import { Header } from './components/Header'
 import { Scoreboard } from './components/Scoreboard'
-import { Tarots } from './components/Tarots'
+import { Tarots } from './logic/Tarots'
 import { useState, useEffect } from 'react'
+import { Display } from './components/Display'
 
 function App() {
   const [touchedCards, setTouchedCards] = useState([])
@@ -25,9 +26,7 @@ function App() {
       </div>
       {console.log(touchedCards)}
       {console.log(allCards)}
-      {Tarots.cards.map((card, index) => {
-        return <img key={index} src={card.image} data-id={card.id} alt="tarot card" onClick={touchCard}></img>
-      })}
+      <Display cards={Tarots.cards} touchCard={touchCard} />
     </div>
   );
 }

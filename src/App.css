@@ -20,6 +20,10 @@
   align-items: center;
 }
 
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
 .b-box {
   box-sizing: border-box;
 }
