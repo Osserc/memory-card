@@ -38,6 +38,7 @@ html, body, #app {
   margin: 0;
   box-sizing: border-box;
   width: 100%;
+  color: whitesmoke;
 }
 
 body {
@@ -48,5 +49,8 @@ body {
 header {
   font-size: 50px;
   font-weight: bold;
-  color: whitesmoke;
+}
+
+.Scoreboard {
+  font-size: 32px;
 }

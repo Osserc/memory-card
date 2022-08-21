@@ -1,10 +1,13 @@
 import './App.css'
 import { Header } from './components/Header'
+import { Scoreboard } from './components/Scoreboard'
 import { Tarots } from './components/Tarots'
 import { useState, useEffect } from 'react'
 
 function App() {
   const [touchedCards, setTouchedCards] = useState([])
+  const [currentScore, setCurrentScore] = useState(0)
+  const [highScore, setHighScore] = useState(0)
   let allCards = Tarots.cards.map((card) => {
     return card.id
   })
@@ -16,7 +19,10 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <div className="flex justify-between p-15">
+        <Header />
+        <Scoreboard currentScore={currentScore} total={allCards.length} highScore={highScore} />
+      </div>
       {console.log(touchedCards)}
       {console.log(allCards)}
       {Tarots.cards.map((card, index) => {
