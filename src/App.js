@@ -4,6 +4,7 @@ import { Scoreboard } from './components/Scoreboard'
 import { Tarots } from './logic/Tarots'
 import { useState, useEffect } from 'react'
 import { Display } from './components/Display'
+import { Ruleset } from './components/Ruleset'
 
 function App() {
   const [touchedCards, setTouchedCards] = useState([])
@@ -16,6 +17,11 @@ function App() {
 
   useEffect(() => {
     setDisplay()
+    const modal = document.getElementById('ruleset')
+    document.body.addEventListener('click', () => {
+      modal.classList.remove('visible')
+    }, { once: true })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -56,11 +62,12 @@ function App() {
   function prepareDisplay() {
     let eligibleCards = allCards.filter((card) => !touchedCards.includes(card))
     let pityCard = eligibleCards[Math.floor(Math.random() * (eligibleCards.length - 1))]
+    console.log(pityCard)
     let displayCards = [pityCard]
     for (let i = 0; i < 9; i++) {
       let card = displayCards[0]
       while (displayCards.includes(card) === true || card === undefined) {
-        card = allCards[Math.floor(Math.random() * (eligibleCards.length - 1))]
+        card = allCards[Math.floor(Math.random() * (allCards.length - 1))]
 
       }
       displayCards.push(card)
@@ -94,6 +101,7 @@ function App() {
       <div className="flex justify-center align-center">
         <Display cards={currentCards} touchCard={touchCard} />
       </div>
+      <Ruleset />
     </div>
   );
 }

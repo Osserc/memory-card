@@ -32,12 +32,17 @@
   padding: 15px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 /* css proper */
 
 html, body, #app {
   margin: 0;
   box-sizing: border-box;
   width: 100%;
+  height: 100%;
   color: whitesmoke;
 }
 
@@ -64,6 +69,26 @@ header {
 
 #display img {
   display: inline-block;
+}
+
+.modal {
+  font-size: 30px;
+  background-color: white;
+  border: 5px solid black;
+  color: black;
+  padding: 25px;
+  /* width: fit-content; */
+  position: absolute;
+  width: 40%;
+  top: 40%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: none;
+}
+
+.visible {
+  display: block;
 }
 
 @media (max-width: 768px) {
