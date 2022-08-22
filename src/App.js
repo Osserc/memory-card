@@ -5,12 +5,14 @@ import { Tarots } from './logic/Tarots'
 import { useState, useEffect } from 'react'
 import { Display } from './components/Display'
 import { Ruleset } from './components/Ruleset'
+import { Endgame } from './components/Endgame'
 
 function App() {
   const [touchedCards, setTouchedCards] = useState([])
   const [currentCards, setCurrentCards] = useState([])
   const [currentScore, setCurrentScore] = useState(0)
   const [highScore, setHighScore] = useState(0)
+  const [endGame, setEndGame] = useState(false)
   const allCards = Tarots.cards.map((card) => {
     return card.id
   })
@@ -26,6 +28,12 @@ function App() {
 
   useEffect(() => {
     setCurrentScore(touchedCards.length)
+    if (touchedCards.length !== 22) {
+      advanceRound()
+    } else {
+      closeGame()
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [touchedCards])
 
   function touchCard(event) {
@@ -34,7 +42,20 @@ function App() {
     } else {
       addCard(event)
     }
+  }
+
+  function advanceRound() {
     setDisplay()
+  }
+
+  function closeGame() {
+    updateHighScore()
+    setEndGame(true)
+  }
+
+  function resetGame() {
+    setEndGame(false)
+    setTouchedCards([])
   }
 
   function addCard(event) {
@@ -62,7 +83,6 @@ function App() {
   function prepareDisplay() {
     let eligibleCards = allCards.filter((card) => !touchedCards.includes(card))
     let pityCard = eligibleCards[Math.floor(Math.random() * (eligibleCards.length - 1))]
-    console.log(pityCard)
     let displayCards = [pityCard]
     for (let i = 0; i < 9; i++) {
       let card = displayCards[0]
@@ -99,7 +119,11 @@ function App() {
         <Scoreboard currentScore={currentScore} total={allCards.length} highScore={highScore} />
       </div>
       <div className="flex justify-center align-center">
-        <Display cards={currentCards} touchCard={touchCard} />
+        { endGame === false ?
+          <Display cards={currentCards} touchCard={touchCard} />
+          :
+          <Endgame resetGame={resetGame} />
+        }
       </div>
       <Ruleset />
     </div>
